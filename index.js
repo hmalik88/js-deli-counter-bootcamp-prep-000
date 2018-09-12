@@ -1,7 +1,8 @@
 var katzDeliLine = [];
-function takeANumber (katzDeliLine, personname) {
-  katzDeliLine.push(personname);
-  return `Welcome, ${personname}. You are number ${katzDeliLine.length} in line.`;
+function takeANumber (katzDeliLine) {
+  var placeInLine = [];
+  placeInLine.push(katzDeliLine.length + 1);
+  return `You are number ${placeInLine} in line.`;
 }
 
 function nowServing (katzDeliLine) {
@@ -9,8 +10,7 @@ function nowServing (katzDeliLine) {
   if (katzDeliLine.length === 0) {
     return "There is nobody waiting to be served!";
   } else {
-     removedname = katzDeliLine[0];
-     katzDeliLine.shift();
+     removedname = katzDeliLine.shift();
      return `Currently serving ${removedname}.`;
 }
 }
